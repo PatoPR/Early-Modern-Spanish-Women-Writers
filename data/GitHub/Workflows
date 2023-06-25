@@ -1,0 +1,75 @@
+name: Build
+on: [push]
+concurrency:
+    group: ${{ github.ref }}
+    cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+       - name: Checkout repository
+         uses: actions/checkout@v2
+       - name: Fetch tags
+         run: git fetch --prune --unshallow --tags
+       - uses: actions/setup-node@v2
+         with:
+            node-version: '16'
+       - name: Setup sass
+         run: npm install sass -g
+       - name: Set environment variables
+         run: >
+            VERSION=$(cat ${{ github.workspace }}/VERSION);
+            SHORT_SHA=`git rev-parse --short HEAD`;
+            ARTIFACT_NAME="${VERSION}_${SHORT_SHA}";
+            echo "VERSION=${VERSION}" >> $GITHUB_ENV;
+            echo "SHORT_SHA=${SHORT_SHA}" >> $GITHUB_ENV;
+            echo "ARTIFACT_NAME=${ARTIFACT_NAME}" >> $GITHUB_ENV
+       # Run apt-get first
+       - name: Update apt-get
+         run:  sudo apt-get update
+        # Now install libvips
+       - name: Install libvips
+         run: sudo apt-get install -y --no-install-recommends --no-upgrade libvips-tools
+        # Now ant, if we must 
+       - name: Install ant
+         if: ${{ env.ACT }}
+         run: sudo apt-get install -y --no-install-recommends --no-upgrade ant
+        # Must also install ant-contrib
+       - name: Install ant-contrib
+         run: sudo apt-get install -y --no-install-recommends --no-upgrade ant-contrib
+        # Build the site fully
+       - name: Build site
+         run: ant -f ${{ github.workspace }}/build.xml
+       - name: Build dist
+         run: ant -f ${{ github.workspace }}/buildDist.xml
+         # Upload the artifacts
+       - name: Archive artifacts
+         uses: actions/upload-artifact@v2
+         with:
+            name: wea_small
+            path: ${{ github.workspace }}/dist/wea_small.zip
+  checka11y:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+           node-version: '16'
+      - name: Download packages
+        run: npm install pa11y-ci pa11y-ci-reporter-html -g
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Download all artifacts
+        uses: actions/download-artifact@v2
+      - name: Unzip site
+        run: unzip wea_small/wea_small.zip
+      - name: Debugging
+        run: pwd && ls -R
+      - name: Validate with pa11y
+        run: pa11y-ci --config ${{ github.workspace }}/.pa11yci ./products/site/*.html
+      - name: Archive reports
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+            name: pa11y-ci-report
+            path: pa11y-ci-report
