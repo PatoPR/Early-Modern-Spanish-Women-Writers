@@ -1,18 +1,56 @@
-body {
-    background-color: #e6e6fa; /* Light violet color */
-    font-family: Arial, sans-serif; /* Replace with your desired font */
-  }
-  
-  /* Additional styles for dropdown menus */
-  .dropdown-menu {
-    background-color: #e6e6fa; /* Light violet color */
-  }
-  
-  .dropdown-menu a {
-    color: #333333; /* Replace with desired font color */
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #dddddd; /* Replace with desired hover color */
-  }
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modernas Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Modernas"></a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">About</a>
+          <ul class="submenu">
+            <li><a href="#">About Modernas Project</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Acknowledgments</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Archive</a>
+          <ul class="submenu">
+            <li><a href="#">María de Zayas y Sotomayor</a></li>
+            <li><a href="#">Leonor de Meneses</a></li>
+            <li><a href="#">Mariana de Carvajal y Saavedra</a></li>
+            <li><a href="#">María Egual</a></li>
+            <li><a href="#">Ana Francisca Abarca de Bolea y Mur</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Visualization Tools</a>
+          <ul class="submenu">
+            <li><a href="#">Maps</a></li>
+            <li><a href="#">Timeline</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Resources</a>
+          <ul class="submenu">
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Scholarship</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search...">
+      <button type="submit">Search</button>
+    </div>
+  </header>
+
+  <!-- Rest of your website content goes here -->
+
+  <script src="script.js"></script>
+</body>
+</html>
+
   
