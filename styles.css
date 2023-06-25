@@ -1,56 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Modernas Website</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="logo.png" alt="Modernas"></a>
-    </div>
-    <nav>
-      <ul class="menu">
-        <li><a href="#">About</a>
-          <ul class="submenu">
-            <li><a href="#">About Modernas Project</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Acknowledgments</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Archive</a>
-          <ul class="submenu">
-            <li><a href="#">María de Zayas y Sotomayor</a></li>
-            <li><a href="#">Leonor de Meneses</a></li>
-            <li><a href="#">Mariana de Carvajal y Saavedra</a></li>
-            <li><a href="#">María Egual</a></li>
-            <li><a href="#">Ana Francisca Abarca de Bolea y Mur</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Visualization Tools</a>
-          <ul class="submenu">
-            <li><a href="#">Maps</a></li>
-            <li><a href="#">Timeline</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Resources</a>
-          <ul class="submenu">
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Scholarship</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    <div class="search">
-      <input type="text" placeholder="Search...">
-      <button type="submit">Search</button>
-    </div>
-  </header>
+.subheadings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  <!-- Rest of your website content goes here -->
+.subheadings li {
+  padding: 10px;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.subheadings li:hover ul {
+  display: block;
+}
+
+.subheadings ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  list-style: none;
+  margin-top: 0;
+  z-index: 1;
+}
+
+.subheadings ul li {
+  margin: 5px 0;
+}
+
+.subheadings ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.subheadings {
+  font-family: "Arial", sans-serif;
+}
+body {
+  background-color: #f5e8ff;
+}
+
 
   
