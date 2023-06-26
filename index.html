@@ -1,21 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modernas</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="modernas.png" alt="Modernas Logo" width="100">
+                <img src="modernas.png" alt="Modernas">
             </a>
         </div>
-        <div class="menu">
-            <!-- Menu code here -->
+        <div class="search-area">
         </div>
     </header>
+
+    <nav>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#" class="subheading">About</a>
+                <ul class="submenu">
+                    <li><a href="#">About Modernas Project</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Acknowledgments</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="subheading">Archive</a>
+                <ul class="submenu">
+                    <li><a href="#">María de Zayas y Sotomayor</a></li>
+                    <li><a href="#">Leonor de Meneses</a></li>
+                    <li><a href="#">Mariana de Carvajal y Saavedra</a></li>
+                    <li><a href="#">María Egual</a></li>
+                    <li><a href="#">Ana Francisca Abarca de Bolea y Mur</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="subheading">Visualization Tools</a>
+                <ul class="submenu">
+                    <li><a href="#">Maps</a></li>
+                    <li><a href="#">Timeline</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="subheading">Resources</a>
+                <ul class="submenu">
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Scholarship</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
     <section class="home">
         <div class="background-image"></div>
@@ -29,55 +69,80 @@
 
     <section class="welcome">
         <div class="container">
-            <h3 class="section-title">Welcome to our website dedicated to exploring and celebrating the rich literary heritage of Spanish women writers from early modernity.</h3>
-            <p class="section-content">Our mission is to bring to light the often-overlooked contributions of these remarkable women, including María de Zayas y Sotomayor, María Egual, Leonor de Meneses Noronha, Mariana de Carvajal y Saavedra, and Ana Francisca Abarca de Bolea y Mur. These writers defied the gender roles of their time and broke through the barriers that held them back, leaving behind a legacy of powerful, insightful, and influential literary works that continue to inspire and captivate readers today.</p>
-            <div class="read-more">
-                <p class="section-content">On this website, you’ll find in-depth research, insightful analysis, and fascinating historical context about the lives and works of these trailblazing writers. Our team of dedicated researchers is committed to uncovering the hidden gems of Spanish women’s literature, and we invite you to join us on this journey of discovery.</p>
-                <a href="#" class="read-more-button">Read More</a>
-            </div>
+            <h2 class="section-title">Welcome</h2>
+            <p class="section-content">Welcome to our website dedicated to exploring and celebrating the rich literary
+                heritage of Spanish women writers from early modernity. Our mission is to bring to light the
+                often-overlooked contributions of these remarkable women, including María de Zayas y Sotomayor,
+                María Egual, Leonor de Meneses Noronha, Mariana de Carvajal y Saavedra, and Ana Francisca Abarca de Bolea
+                y Mur. These writers defied the gender roles of their time and broke through the barriers that held them
+                back, leaving behind a legacy of powerful, insightful, and influential literary works that continue to
+                inspire and captivate readers today.</p>
+            <p class="section-content">On this website, you’ll find in-depth research, insightful analysis, and
+                fascinating historical context about the lives and works of these trailblazing writers. Our team of
+                dedicated researchers is committed to uncovering the hidden gems of Spanish women’s literature, and we
+                invite you to join us on this journey of discovery.</p>
+            <p class="section-content">We hope this website serves as a valuable resource for scholars, students, and
+                enthusiasts alike and sparks a renewed appreciation for the groundbreaking contributions of Spanish
+                women writers throughout history. Thank you for visiting, and we invite you to explore the fascinating
+                world of early modern Spanish women’s literature with us.</p>
+            <a href="#" class="read-more">Read more</a>
         </div>
     </section>
 
     <section class="featured-items">
         <div class="container">
-            <h3 class="section-title">Featured Items</h3>
-            <div class="item">
-                <a href="#">
-                    <img src="visualization-tools.png" alt="Visualization Tools">
-                    <h4>Visualization Tools</h4>
-                </a>
-            </div>
-            <div class="item">
-                <a href="#">
-                    <img src="catalogue.jpg" alt="Catalogue">
-                    <h4>Catalogue</h4>
-                </a>
-            </div>
-            <div class="item">
-                <a href="#">
-                    <img src="maps.jpg" alt="Maps">
-                    <h4>Maps</h4>
-                </a>
+            <h2 class="section-title">Featured Items</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="visualization-tools.png" alt="Visualization Tools">
+                    </a>
+                    <div class="carousel-caption">
+                        <p>Visualization Tools</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="catalogue.jpg" alt="Catalogue">
+                    </a>
+                    <div class="carousel-caption">
+                        <p>Catalogue</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="maps.jpg" alt="Maps">
+                    </a>
+                    <div class="carousel-caption">
+                        <p>Maps</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="footer">
-        <div class="container">
-            <div class="ubc-logo">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="https://www.sshrc-crsh.gc.ca/home-accueil-eng.aspx">
+                    <img src="canadian-flag.png" alt="Canadian Flag">
+                </a>
+                <p>Vancouver Campus<br>
+                    French, Hispanic and Italian Studies Department<br>
+                    715 – 1873 East Mall. Buchanan Tower<br>
+                    Vancouver, British Columbia Canada V6T 1Z1</p>
+            </div>
+            <div class="footer-right">
                 <a href="https://www.ubc.ca/">
-                    <img src="ubc-logo.jpg" alt="UBC Logo" width="100">
+                    <img src="ubc-logo.jpg" alt="UBC Logo">
                 </a>
             </div>
-            <div class="ubc-description">
-                <p class="section-content">Vancouver Campus<br>French, Hispanic and Italian Studies Department<br>715 – 1873 East Mall. Buchanan Tower<br>Vancouver, British Columbia Canada V6T 1Z1</p>
-            </div>
-            <div class="canadian-flag">
-                <img src="canadian-flag.png" alt="Canadian Flag">
-            </div>
         </div>
-    </section>
+    </footer>
+
 </body>
+
 </html>
 
-   
+            
+             
