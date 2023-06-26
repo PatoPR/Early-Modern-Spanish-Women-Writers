@@ -1,8 +1,33 @@
-/* Reset styles */
+
+.logo-modernas {
+  width: 100px; /
+  height: auto; /
+}
+
+
+.logo-ubc {
+  width: 80px; /
+  height: auto; /
+}
+.logo-canada {
+  width: 50px; /
+  height: auto; /
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+  background-image: url(background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.background-image {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Body styles */
@@ -21,11 +46,11 @@ header {
 }
 
 .logo img {
-    max-width: 100px; /* Adjust the logo size as desired */
+    max-width: 100px; 
 }
 
 .search-area {
-    /* Add styles for the search area */
+ 
 }
 
 /* Navigation styles */
