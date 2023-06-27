@@ -179,3 +179,142 @@ footer {
   height: 50px;
   margin: 0 10px;
 }
+/* Add these new CSS rules at the end of the file */
+
+/* Logo and Menu */
+.logo {
+    display: inline-block;
+}
+
+.logo-modernas {
+    width: 80px;
+    height: 80px;
+}
+
+.horizontal-menu {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-item:hover > .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.sub-menu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+.sub-menu a:hover {
+    color: #000;
+}
+
+/* Welcome Section */
+.welcome {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section-content {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Featured Items */
+.featured-items {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.featured-items h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.featured-items-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-item {
+    width: 50%;
+}
+
+.featured-item img {
+    width: 100%;
+    height: auto;
+}
+
+.featured-item-prev,
+.featured-item-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.featured-item-prev:hover,
+.featured-item-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.featured-item-prev {
+    left: 10px;
+}
+
+.featured-item-next {
+    right: 10px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+}
