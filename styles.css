@@ -1,16 +1,27 @@
-/* Logo and Menu */
-.logo {
-  display: inline-block;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.logo-modernas {
-  width: 160px;
-  height: 160px;
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 30px;
+  height: 30px;
 }
 
 .horizontal-menu {
-  display: inline-block;
-  margin-left: 20px;
+  list-style-type: none;
+  display: flex;
 }
 
 .menu-item {
@@ -18,9 +29,10 @@
 }
 
 .menu-item a {
-  padding: 10px;
-  color: #333;
+  display: block;
+  padding: 12px 16px;
   text-decoration: none;
+  color: black;
 }
 
 .menu-item:hover > .sub-menu {
@@ -28,110 +40,142 @@
 }
 
 .sub-menu {
-  position: absolute;
   display: none;
-  background-color: #fff;
-  padding: 10px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-.sub-menu a {
-  display: block;
-  color: #333;
+.sub-menu li a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
+  display: block;
 }
 
-.sub-menu a:hover {
-  color: #000;
+.search input[type="text"] {
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
 }
 
-/* Welcome Section */
-.welcome {
-  padding: 40px 0;
-  background-color: #f9f9f9;
+.search button[type="submit"] {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
 }
 
-.section-title {
-  font-size: 32px;
-  color: #333;
-  margin-bottom: 20px;
+.home {
+  position: relative;
+  height: 500px;
 }
 
-.section-content {
-  font-size: 18px;
-  color: #666;
-  line-height: 1.6;
+.background-image {
+  background-image: url("background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  filter: opacity(50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 48px;
   margin-bottom: 10px;
 }
 
-.read-more {
-  color: #007bff;
-  text-decoration: none;
-}
-
-/* Featured Items */
-.featured-items {
-  margin-top: 40px;
-  padding: 20px 0;
-  background-color: #f9f9f9;
-}
-
-.featured-items h2 {
+.subtitle {
   font-size: 24px;
-  color: #333;
   margin-bottom: 20px;
 }
 
-.featured-items-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.welcome {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.featured-item {
-  width: 50%;
+.welcome-message {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.featured-item img {
-  width: 100%;
-  height: auto;
+.read-more {
+  font-size: 16px;
+  color: white;
+  text-decoration: underline;
 }
 
-.featured-item-prev,
-.featured-item-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.featured-item-prev:hover,
-.featured-item-next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.featured-item-prev {
-  left: 10px;
-}
-
-.featured-item-next {
-  right: 10px;
-}
-
-/* Footer */
-.footer {
+.featured-items {
+  background-color: #f9f9f9;
   padding: 20px;
-  background-color: #333;
-  color: #fff;
   text-align: center;
 }
 
-.footer-text {
-  font-size: 14px;
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 150px;
+}
+
+.slide {
+  flex: 0 0 150px;
+  margin: 0 10px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+}
+
+.ubc-logo img,
+.flag img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
 }
