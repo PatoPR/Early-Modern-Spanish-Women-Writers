@@ -1,139 +1,247 @@
-/* Add these new CSS rules at the end of the file */
+/* Reset CSS */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-/* Logo and Menu */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .logo {
-    display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .logo-modernas {
-    width: 80px;
-    height: 80px;
+  width: 160px;
+  height: 160px;
 }
 
 .horizontal-menu {
-    display: inline-block;
-    margin-left: 20px;
+  list-style: none;
+  display: flex;
 }
 
 .menu-item {
-    position: relative;
+  position: relative;
 }
 
 .menu-item a {
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
 }
 
 .menu-item:hover > .sub-menu {
-    display: block;
+  display: block;
 }
 
 .sub-menu {
-    position: absolute;
-    display: none;
-    background-color: #fff;
-    padding: 10px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .sub-menu a {
-    display: block;
-    color: #333;
-    text-decoration: none;
+  display: block;
+  color: #333;
+  text-decoration: none;
 }
 
 .sub-menu a:hover {
-    color: #000;
+  color: #000;
+}
+
+/* Home Section */
+.home {
+  position: relative;
+  height: 400px;
+  background-image: url('background-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
 }
 
 /* Welcome Section */
 .welcome {
-    padding: 40px 0;
-    background-color: #f9f9f9;
+  padding: 40px 0;
+  background-color: #f9f9f9;
 }
 
 .section-title {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .section-content {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
 .read-more {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 /* Featured Items */
 .featured-items {
-    margin-top: 40px;
-    padding: 20px 0;
-    background-color: #f9f9f9;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #f9f9f9;
 }
 
 .featured-items h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .featured-items-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .featured-item {
-    width: 50%;
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s;
 }
 
 .featured-item img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-item.active {
+  transform: translateX(0%);
+}
+
+.featured-item.prev {
+  transform: translateX(-100%);
+}
+
+.featured-item.next {
+  transform: translateX(100%);
 }
 
 .featured-item-prev,
 .featured-item-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .featured-item-prev:hover,
 .featured-item-next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .featured-item-prev {
-    left: 10px;
+  left: 10px;
 }
 
 .featured-item-next {
-    right: 10px;
+  right: 10px;
 }
 
 /* Footer */
-.footer {
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
 }
 
 .footer-text {
-    font-size: 14px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-canada,
+.logo-ubc {
+  width: 40px;
+  height: 40px;
 }
