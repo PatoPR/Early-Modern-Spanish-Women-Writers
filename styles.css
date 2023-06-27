@@ -55,38 +55,46 @@ nav {
   background-color: #fff;
 }
 
-.vertical-menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 10px;
+.horizontal-menu {
   display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
 }
 
-.menu-item {
-  position: relative;
-  margin-right: 20px;
+.horizontal-menu .menu-item {
+  margin-right: 10px;
 }
 
-.sub-menu {
+.horizontal-menu .sub-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #000;
+  margin-top: 5px;
+  padding: 0;
 }
 
-.menu-item:hover .sub-menu {
+.horizontal-menu .menu-item:hover .sub-menu {
   display: block;
 }
 
-.sub-menu a {
-  display: block;
-  padding: 5px 0;
-  color: #000;
-  text-decoration: none;
+.horizontal-menu .menu-item:hover .sub-menu li {
+  margin: 0;
 }
+
+.horizontal-menu .sub-menu li {
+  display: block;
+}
+
+.horizontal-menu .sub-menu li a {
+  display: block;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.horizontal-menu .sub-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
 
 /* Home section styles */
 .home {
