@@ -1,108 +1,108 @@
-/* Logo sizes */
-.logo-modernas {
-  width: 30px;
-  height: auto;
-  src: "modernas.png";
-}
-
-.logo-ubc {
-  width: 40px;
-  height: auto;
-  src: "ubc-logo.jpg";
-}
-
-.logo-canada {
-  width: 40px;
-  height: auto;
-  src: "canadian-flag.png";
-}
-
-/* Global styles */
+/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Global styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #d8b8e2; /* Light violet background */
 }
 
-.background-image {
-  background-color: rgba(255, 255, 255, 0.5);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Header styles */
+/* Header */
 header {
+  background-color: #f2f2f2;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
 }
 
-.logo img {
-  max-width: 100px;
+.logo {
+  margin-right: 10px;
 }
 
-.search-area {
-  /* Add your search area styles here */
-}
-
-/* Navigation styles */
-nav {
-  background-color: #fff;
+.logo-modernas {
+  width: 50px;
+  height: 50px;
 }
 
 .horizontal-menu {
   display: flex;
-  justify-content: center;
+  list-style-type: none;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item > a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f2f2f2;
+  display: none;
   list-style-type: none;
   padding: 0;
-}
-
-.horizontal-menu .menu-item {
-  margin-right: 10px;
-}
-
-.horizontal-menu .sub-menu {
-  display: none;
-  position: absolute;
-  margin-top: 5px;
-  padding: 0;
-}
-
-.horizontal-menu .menu-item:hover .sub-menu {
-  display: block;
-}
-
-.horizontal-menu .menu-item:hover .sub-menu li {
   margin: 0;
 }
 
-.horizontal-menu .sub-menu li {
+.menu-item:hover .sub-menu {
   display: block;
 }
 
-.horizontal-menu .sub-menu li a {
-  display: block;
+.sub-menu li a {
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
   padding: 5px;
-  white-space: nowrap;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px;
 }
 
-.horizontal-menu .sub-menu li a:hover {
-  background-color: #f0f0f0;
+.search button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
 }
 
-
-/* Home section styles */
+/* Home Section */
 .home {
   position: relative;
-  height: 400px;
-  background-image: url(background-image.jpg);
+  height: 500px;
+}
+
+.background-image {
+  background-image: url("background-image.jpg");
   background-size: cover;
   background-position: center;
+  opacity: 0.3;
+  height: 100%;
 }
 
 .overlay {
@@ -111,707 +111,109 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.container {
-  text-align: center;
   color: #fff;
+  text-align: center;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
-/* Welcome section styles */
+/* Welcome Section */
 .welcome {
+  padding: 50px 0;
   background-color: #fff;
-  padding: 20px;
 }
 
 .section-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .section-content {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.read-more {
-  color: #000;
-  text-decoration: none;
-}
-
-/* Featured items section styles */
+/* Featured Items Section */
 .featured-items {
-  background-color: #f9f9f9;
-  padding: 20px;
+  padding: 50px 0;
+  background-color: #f7f7f7;
 }
 
-.section-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+.featured-item-image {
+  width: 25%;
 }
 
-.carousel {
-  display: flex;
-  overflow-x: scroll;
-  padding-top: 10px;
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
-.carousel-item img {
-  width: 80px;
-  height: auto;
-}
-
-.carousel-item:nth-child(1) img {
-  src: "visualization-tools.png";
-}
-
-.carousel-item:nth-child(2) img {
-  src: "catalogue.jpg";
-}
-
-.carousel-item:nth-child(3) img {
-  src: "maps.jpg";
-}
-
-.carousel-caption {
+.slide {
+  display: none;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 5px;
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-/* Footer styles */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Footer */
 footer {
-  background-color: #f9f9f9;
-  padding: 20px;
-}
-
-.footer-content {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-left p {
-  margin-bottom: 5px;
-}
-
-.footer-right img {
+.footer-logo {
+  width: 20%;
   max-width: 100px;
+  height: auto;
 }
 
-
-/* Navigation Menu Styles */
-.navbar {
-  background-color: #f9f9f9;
-  padding: 10px;
-  font-family: 'Sans', Arial, sans-serif;
-}
-
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navbar li {
+.writers a {
+  display: inline-block;
   margin-right: 10px;
-}
-
-.navbar a {
+  color: #fff;
   text-decoration: none;
-  color: #000;
-  font-weight: 400;
 }
-
-.navbar a:hover {
-  color: #666;
-}
-
-.navbar .active {
-  color: #666;
-}
-/* montserrat-500 - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Montserrat Medium'), local('Montserrat-Medium'),
-       url('../fonts/montserrat-v14-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-500italic - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: italic;
-  font-weight: 500;
-  src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'),
-       url('../fonts/montserrat-v14-latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-600 - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
-       url('../fonts/montserrat-v14-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-600italic - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'),
-       url('../fonts/montserrat-v14-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-700 - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Montserrat Bold'), local('Montserrat-Bold'),
-       url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-700italic - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'),
-       url('../fonts/montserrat-v14-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-800 - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
-       url('../fonts/montserrat-v14-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-800italic - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: italic;
-  font-weight: 800;
-  src: local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'),
-       url('../fonts/montserrat-v14-latin-800italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-800italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-900 - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Montserrat Black'), local('Montserrat-Black'),
-       url('../fonts/montserrat-v14-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* montserrat-900italic - latin */
-@font-face {
-  font-family: 'Sans';
-  font-style: italic;
-  font-weight: 900;
-  src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'),
-       url('../fonts/montserrat-v14-latin-900italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/montserrat-v14-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* playfair-display-regular - latin */
-@font-face {
-  font-family: 'Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''),
-       url('../fonts/playfair-display-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/playfair-display-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* playfair-display-italic - latin */
-@font-face {
-  font-family: 'Serif';
-  font-style: italic;
-  font-weight: 400;
-  src: local(''),
-       url('../fonts/playfair-display-v20-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/playfair-display-v20-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
-  font-family: 'hack-serif';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/PlayfairDisplay-Regular.ttf');
-  font-display: swap;
-}
-
-/********************************
- * 
- * The following block is taken from the Google Material Design
- * Icon library. See the iconfont directory for licensing and
- * further details.
- * 
- * Note that we shorten the default class name from "material-icons"
- * to "mi"
- * 
- *********************************/
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(../fonts/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-    url(../fonts/iconfont/MaterialIcons-Regular.woff) format('woff'),
-    url(../fonts/iconfont/MaterialIcons-Regular.ttf) format('truetype');
-}
-
-.mi, .fidLink:before {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
-/******************************************************************** ROOT ******/
-
-:root {
-  /* BASIC COLOURS */
-  --modernas-pink: #DF006E;
-  --modernas-grey: #efefef;
-  --modernas-pink-rgb: rgb(223, 0, 110);
-  
-  --modernas-text-color: #292929;
-  --modernas-footer-bg-color: #f8f9fa;
-  --modernas-header-bg-color: #f8f9fa;
-  --modernas-info-bg-color: #f5f8f6;
-  --modernas-additional-info-bg-color: var(--modernas-grey);
-  --header-height: 3.5rem;
-  --body-margin-top: calc(var(--header-height) + 2rem);
-  --anchor-offset: calc(var(--header-height) * 1.05);
-  --link-color: #2A5DB0;
-  
-  /* PB MARGIN TOP BOTTOM */
-  --pb-margin-tb: 2.25rem;
-   /* Since pbs are just heightless border lines, they need slightly different margins
-    * to accomodate the offset jump thing. */
-  --pb-anchor-offset: calc(var(--anchor-offset) + var(--pb-margin-tb));
-  
-  --max-text-width: 50rem;
-  --main-padding-left: 10%;
-  --main-padding-right: 10%;
-  
-  --download-btn-offset: 0%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-::selection {
-  background-color: #fff19e;
-}
-
-
-/****************************************************************** BASIC STRUCTURE ******/
-
-/********* MAIN HTML ********/
-html {
-  font-family: Sans;
-  font-size: 100%;
-  font-size: 16px; 
-}
-
-
-/********* BODY ********/
-
-body {
-  line-height: 1.425;
-  /* This is slightly darker than in Serina's designs. */
-  color: var(--modernas-text-color);
-  margin: 0;
-  display: flex;  /* use the flex model */
-  min-height: 100vh;
-  flex-direction: column;
-  overflow-x: hidden;
-}
-
-/* Special handling if no transcription available */
-
-div[data-type='noTranscriptionAvailable'] {
-  margin-top: 2.5rem;
-  margin-bottom: -2.5rem;
-}
-
-/*  OVERLAY (MAY COME IN HANDY IN OTHER CONTEXTS) */
-
-
-header::after {
-  content: "";
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-/* HEADER */
-
-header {
-  background-color: var(--modernas-header-bg-color);
-  position: fixed;
-  z-index: 8000;
-  width: 100vw;
-  height: var(--header-height);
-}
-
-nav {
-  display: flex;
-  margin-left: var(--main-padding-left);
-  margin-right: var(--main-padding-right);
-  height: 100%;
-}
-
-nav .home {
-  display: block;
-  font-size: 2.1rem;
-  margin-right: 2rem;
-  padding: 0;
-  font-family: "Serif";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-a#nav_toggle {
-  display: none;
-}
-
-ul#menu_main ul,
-ul#menu_main li {
-  list-style: none;
-}
-
-ul#menu_main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-}
-
-ul#menu_main > li {
-  padding: 0 1rem;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 0.7rem;
-  margin-top: 1.25rem;
-  box-sizing: border-box;
-}
-
-ul#menu_main > li > ul {
-  display: none;
-}
-
-ul#menu_main > li > ul > li {
-  margin: 0;
-  text-transform: none;
-  padding-left: 0;
-  border-bottom: 1px solid #efefef;
-  padding-right: 0.25rem;
-}
-
-ul#menu_main > li > ul > li > a {
-  display: inline-block;
-  width: calc(100% - 0.5rem);
-  height: 100%;
-  padding: 0.75rem 0 0.75rem 0.5rem;
-}
-
-#search ul#menu_main > li > ul > li > a {
-  height: unset;
-}
-
-ul#menu_main > li > ul > li:last-child {
-  border-bottom: none;
-}
-
-li#menu_main_search,
-li.closer {
-  display: none;
-}
-
-nav > div#nav_search {
-  position: absolute;
-  right: var(--main-padding-right);
-  margin-right: 2rem;
-  top: 25%;
-}
-/* Special list for navigating the bibls */
-
-ul[data-type='bibl_nav'] {
-  display: inline-block;
-}
-
-ul[data-type='bibl_nav'] > li {
-  display: inline-block;
-  padding: 0 .5rem;
-}
-
-ul[data-type='bibl_nav'] > li:not(:last-child) {
-  border-right: 1px solid #ccc;
-}
-
-
-label.hidden {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; /* added line */
-  width: 1px;
-}
-
-/* SEARCH PART OF THE NAV */
-
-div#nav_search input {
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 1rem;
-  height: 2.1rem;
-  width: 15rem;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  padding: .25rem;
-}
-
-div#nav_search button,
-div#nav_search input {
-  border: 1px solid #dee2e6;
-}
-
-div#nav_search input:focus {
-  outline: none;
-  box-shadow: inset 0px 0px 1px .25px var(--modernas-pink);
-  transition: box-shadow .15s ease-in-out;
-}
-
-div#nav_search button {
-  background-color: transparent;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  position: absolute;
-  height: 2.1rem;
-  width: 2.1rem;
-  cursor: pointer;
-}
-
-div#nav_search button:hover {
-  background: #ccc;
-}
-
-/* FACSIMILES */
-
-#facsViewerContainer {
-  display: none;
-}
-
-.JS #facsViewerContainer.open {
-  display: flex;
-  background: black;
-  color: white;
-  margin: auto;
-  max-width: 100vw;
-  max-height: 100vh;
-  position: fixed;
-  padding-right: 2rem;
-  align-self: center;
-  z-index: 9000;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.JS #facsViewerContainer.open #facs_closer {
-  font-size: 1.8rem;
-  color: white;
-  justify-self: flex-end;
-  left: -2rem;
-  display: block;
-  position: relative;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
-}
-
-.JS #facsViewerContainer.open #facs_closer:hover {
-  color: var(--modernas-pink);
-  transition: color 0.2s ease-in-out;
-}
-
-.JS img[data-modernas-src^='media/'] {
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.JS img[data-modernas-src^='media/']:hover {
-  cursor: zoom-in;
-  transform: scale(1.02);
-  transition: transform 0.2s ease-in-out;
-}
-
-#facs_loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-/* Loader circle (one element!) comes from
- * 
- * https://projects.lukehaas.me/css-loaders/
- * 
- * with many thanks.
- *  */
-
-.loader,
-.loader:after {
-  border-radius: 50%;
-  width: 10em;
-  height: 10em;
-}
-
-.loader {
-  margin: 60px auto;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid #ffffff;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear;
-}
-@-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-/**** End loader ****/
-
-.loaded #facs_loader {
-  display: none;
-}
-
-.JS.overlay {
-  overflow-y: hidden;
-  padding-right: 15px;
-}
-
-#header_overlay {
-  opacity: 0;
-  height: 1px;
-  width: 1px;
-  transition: opacity 0.5s ease-in-out;
-  background: rgba(38, 29, 24, .8);
-}
-
-.JS.facs-overlay #header_overlay,
-.JS.overlay #header_overlay {
-  opacity: 1;
-  width: 100vw;
-  height: 101vh;
-  position: fixed;
-  transition: opacity 0.3s ease-in-out;
-  top: 0;
-  left: 0;
-}
-
-/* Downloader styles */
-
-/*
-
-/\****************************************************************** HEADER ******\/
-
-header{
-    color:black;
-    font-size:90%;
-    width:100%;
-    margin:0 auto 0 auto;
-    z-index:1000;
-    position:relative;
-    background: var(--modernas-header-bg-color);
-    border-bottom: 1px solid #dedede;
-    position:fixed;
-    height: var(--header-height);
-}
-
-
-
-
-
-
-
-
-
-
 
