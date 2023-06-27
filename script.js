@@ -1,42 +1,33 @@
-// Featured items carousel
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
+// Add these new JavaScript functions at the end of the file
 
-// Function to show the current slide
-const showSlide = (index) => {
-  // Hide all slides
-  slides.forEach((slide) => {
-    slide.style.display = 'none';
-  });
+function navigateFeaturedItems(direction) {
+    const items = Array.from(document.getElementsByClassName('featured-item'));
+    const activeItem = document.querySelector('.featured-item.active');
+    const activeIndex = items.indexOf(activeItem);
 
-  // Show the current slide
-  slides[index].style.display = 'block';
-};
+    let newIndex;
+    if (direction === 'prev') {
+        newIndex = (activeIndex - 1 + items.length) % items.length;
+    } else if (direction === 'next') {
+        newIndex = (activeIndex + 1) % items.length;
+    }
 
-// Function to navigate to the previous slide
-const prevSlide = () => {
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }
-  showSlide(currentSlide);
-};
+    activeItem.classList.remove('active');
+    items[newIndex].classList.add('active');
+}
 
-// Function to navigate to the next slide
-const nextSlide = () => {
-  currentSlide++;
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
-  showSlide(currentSlide);
-};
+function setupFeaturedItemsSlider() {
+    const prevBtn = document.querySelector('.featured-item-prev');
+    const nextBtn = document.querySelector('.featured-item-next');
 
-// Event listeners for navigation buttons
-prevButton.addEventListener('click', prevSlide);
-nextButton.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', () => navigateFeaturedItems('prev'));
+    nextBtn.addEventListener('click', () => navigateFeaturedItems('next'));
 
-// Automatic sliding every 5 seconds
-setInterval(nextSlide, 5000);
+    setInterval(() => {
+        navigateFeaturedItems('next');
+    }, 5000);
+}
 
+window.addEventListener('DOMContentLoaded', () => {
+    setupFeaturedItemsSlider();
+});
