@@ -52,10 +52,11 @@ nav {
   background-color: #fff;
 }
 
-.menu {
-  display: flex;
+.vertical-menu {
   list-style-type: none;
+  margin: 0;
   padding: 10px;
+  display: flex;
 }
 
 .menu-item {
@@ -63,14 +64,7 @@ nav {
   margin-right: 20px;
 }
 
-.subheading {
-  display: block;
-  padding: 10px;
-  color: #000;
-  text-decoration: none;
-}
-
-.submenu {
+.sub-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -80,11 +74,11 @@ nav {
   border: 1px solid #000;
 }
 
-.menu-item:hover .submenu {
+.menu-item:hover .sub-menu {
   display: block;
 }
 
-.submenu a {
+.sub-menu a {
   display: block;
   padding: 5px 0;
   color: #000;
@@ -205,6 +199,8 @@ footer {
 .footer-right img {
   max-width: 100px;
 }
+
+
 
 
 
