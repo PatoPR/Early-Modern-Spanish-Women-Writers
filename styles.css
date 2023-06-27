@@ -2,16 +2,19 @@
 .logo-modernas {
   width: 30px;
   height: auto;
+  src: "modernas.png";
 }
 
 .logo-ubc {
   width: 40px;
   height: auto;
+  src: "ubc-logo.jpg";
 }
 
 .logo-canada {
   width: 40px;
   height: auto;
+  src: "canadian-flag.png";
 }
 
 /* Global styles */
@@ -158,15 +161,21 @@ nav {
   padding-top: 10px;
 }
 
-.carousel-item {
-  flex: 0 0 200px;
-  margin-right: 10px;
-  position: relative;
+.carousel-item img {
+  width: 80px;
+  height: auto;
 }
 
-.carousel-item img {
-  width: 100%;
-  height: auto;
+.carousel-item:nth-child(1) img {
+  src: "visualization-tools.png";
+}
+
+.carousel-item:nth-child(2) img {
+  src: "catalogue.jpg";
+}
+
+.carousel-item:nth-child(3) img {
+  src: "maps.jpg";
 }
 
 .carousel-caption {
