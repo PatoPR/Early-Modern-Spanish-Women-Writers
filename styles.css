@@ -34,7 +34,7 @@ header {
 .menu {
   display: flex;
   list-style-type: none;
-  margin: 0;
+  margin-left: 20px; /* Position the menu slightly leftwards */
   padding: 0;
 }
 
@@ -105,6 +105,10 @@ header {
 
 .hero-image {
   max-width: 100%;
+  background-image: url('background-image.jpg'); /* Add faded background image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
 }
 
 .hero-title {
@@ -217,20 +221,8 @@ home-section:before {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Position the menu slightly leftwards */
-.navbar ul {
-  margin-left: 20px;
-}
-
-/* Add faded background image */
-.hero-image {
-  background-image: url('background-image.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
-}
-
-#home-section h1, #home-section h2 {
+#home-section h1,
+#home-section h2 {
   color: #fff;
 }
 
@@ -243,9 +235,8 @@ home-section:before {
 }
 
 #modernas-logo {
-  width: 120px;
-  margin-left: auto;
-  margin-right: 10px;
+  width: 140px; /* Increase the size of the Modernas logo */
+  margin-right: 10px; /* Position the Modernas logo slightly rightwards */
 }
 
 .menu {
