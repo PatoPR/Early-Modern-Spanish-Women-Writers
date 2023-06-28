@@ -1,6 +1,6 @@
 // Featured items carousel
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.item');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
@@ -37,5 +37,5 @@ const nextSlide = () => {
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
 
-// Automatic sliding every 5 seconds
-setInterval(nextSlide, 5000);
+// Automatic sliding every 7 seconds
+setInterval(nextSlide, 7000);
