@@ -39,3 +39,5 @@ nextButton.addEventListener('click', nextSlide);
 
 // Automatic sliding every 7 seconds
 setInterval(nextSlide, 7000);
+
+  
