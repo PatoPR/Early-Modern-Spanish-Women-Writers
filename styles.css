@@ -105,15 +105,22 @@ header {
 
 .hero-title,
 .hero-subtitle {
-  color: white;
+  color: #fff;
   text-align: center;
 }
 
 .welcome-message {
   max-width: 600px;
   margin: 40px auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Position the welcoming text on the half left of the screen */
+  left: 40%;
 }
-
+.welcome-message a {
+  color: #fff;
+}
 .read-more-link {
   color: blue;
   text-decoration: underline;
