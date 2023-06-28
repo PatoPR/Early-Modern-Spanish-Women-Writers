@@ -37,7 +37,19 @@ const nextSlide = () => {
 prevButton.addEventListener('click', prevSlide);
 nextButton.addEventListener('click', nextSlide);
 
-// Automatic sliding every 7 seconds
+// Automatic sliding every 10 seconds
 setInterval(nextSlide, 7000);
 
-  
+ function toggleReadMore() {
+  const readMore = document.getElementById('read-more');
+  const readMoreLink = document.getElementById('read-more-link');
+
+  if (readMore.style.display === 'none') {
+    readMore.style.display = 'inline';
+    readMoreLink.textContent = 'Read Less';
+  } else {
+    readMore.style.display = 'none';
+    readMoreLink.textContent = 'Read More';
+  }
+}
+ 
