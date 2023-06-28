@@ -32,7 +32,7 @@ header {
 .menu {
   display: flex;
   list-style-type: none;
-  margin-left: 20px; /* Position the menu slightly leftwards */
+  margin-left: 20px;
   padding: 0;
 }
 
@@ -100,17 +100,13 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.7;
-  height: 80vh; /* Adjust the height as needed */
+  height: 500px; /* Adjust the height as needed */
 }
 
 .hero-title,
 .hero-subtitle {
-  color: black; /* Set the color to black */
-  text-align: left; /* Align the text to the left */
-  position: absolute;
-  left: 10%; /* Adjust the left positioning as needed */
-  top: 50%;
-  transform: translateY(-50%);
+  color: white;
+  text-align: center;
 }
 
 .welcome-message {
