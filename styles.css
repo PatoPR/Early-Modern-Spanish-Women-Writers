@@ -108,21 +108,32 @@ header {
   background-size: cover;
   background-position: center;
   opacity: 0.7;
+  height: 80vh;
 }
 
 .hero-title {
   font-size: 36px;
   margin-bottom: 10px;
+  color: black;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero-subtitle {
   font-size: 24px;
   margin-bottom: 20px;
+  color: black; 
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .welcome-message {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 40px auto; 
 }
 
 .read-more-link {
@@ -136,6 +147,7 @@ header {
   background-color: white;
   padding: 40px 0;
   text-align: center;
+  margin-top: 40px;
 }
 
 .featured-items-title {
