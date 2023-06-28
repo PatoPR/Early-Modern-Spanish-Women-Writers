@@ -92,7 +92,6 @@ header {
   color: white;
   cursor: pointer;
 }
-
 /* Hero Section Styles */
 .hero-section {
   background-image: url('background-image.jpg');
@@ -107,14 +106,14 @@ header {
 .hero-subtitle {
   color: #fff;
   text-align: left;
-  /* Position the Modernas title and subtitle below the background image */
-  bottom: 20px;
+  /* Position the Modernas title and subtitle above the welcoming message */
+  top: 20px;
 }
 
 .welcome-message {
   max-width: 600px;
   margin: 40px auto;
-  /* Position the welcoming text outside the "background image" */
+  /* Position the welcoming text relative to the document body */
   position: relative;
   top: 0;
   /* Position the welcoming text below the title and the subtitle */
