@@ -1,6 +1,6 @@
 // Featured items carousel
 let currentSlide = 0;
-const slides = document.querySelectorAll('.item');
+const slides = document.querySelectorAll('.slide');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 
