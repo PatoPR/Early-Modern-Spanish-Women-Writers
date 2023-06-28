@@ -113,10 +113,9 @@ header {
 .welcome-message {
   max-width: 600px;
   margin: 40px auto;
-  /* Position the welcoming text relative to the document body */
-  /* position: relative; */
+  /* Position the welcoming text absolutely within the hero section */
+  position: absolute;
   top: 0;
-  /* Position the welcoming text below the title and the subtitle */
   bottom: 60px;
   color: #fff;
 }
