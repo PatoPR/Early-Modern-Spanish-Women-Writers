@@ -106,18 +106,21 @@ header {
 .hero-title,
 .hero-subtitle {
   color: #fff;
-  text-align: center;
+  text-align: left;
+  /* Position the Modernas title and subtitle on the left side of the screen */
+  left: 20%;
 }
 
 .welcome-message {
   max-width: 600px;
   margin: 40px auto;
-  position: absolute;
+  /* Position the welcoming text outside the "background image" */
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
-  /* Position the welcoming text on the half left of the screen */
-  left: 40%;
+  bottom: 0;
 }
+
 .welcome-message a {
   color: #fff;
 }
