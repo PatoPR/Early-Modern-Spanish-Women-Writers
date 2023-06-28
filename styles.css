@@ -1,63 +1,69 @@
-/* Reset CSS */
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Global styles */
 body {
   font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-/* Header Styles */
-header {
-  background-color: #f2f2f2;
-  padding: 10px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .strip {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
 }
 
-.logo img {
-  width: 450px;
-  height: 150px;
+.logo-link {
+  text-decoration: none;
+  color: #000;
 }
 
-.horizontal-menu {
-  list-style-type: none;
+.logo {
+  width: 80px;
+}
+
+.menu {
   display: flex;
+  list-style-type: none;
 }
 
 .menu-item {
-  margin-right: 10px;
+  position: relative;
 }
 
 .menu-item a {
   text-decoration: none;
-  color: #333;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.menu-item a:hover {
-  background-color: #333;
-  color: #fff;
+  color: #000;
+  padding: 10px;
 }
 
 .sub-menu {
   display: none;
   position: absolute;
-  margin-top: 5px;
+  top: 100%;
+  left: 0;
   background-color: #fff;
-  padding: 5px;
+  padding: 10px;
+  z-index: 1;
 }
 
 .menu-item:hover .sub-menu {
   display: block;
+}
+
+.sub-menu li {
+  margin-bottom: 5px;
 }
 
 .search {
@@ -67,83 +73,133 @@ header {
 
 .search input[type="text"] {
   padding: 5px;
-  border-radius: 5px 0 0 5px;
-  border: none;
 }
 
 .search button {
   padding: 5px 10px;
-  border: none;
-  background-color: #333;
+  background-color: #000;
   color: #fff;
-  border-radius: 0 5px 5px 0;
+  border: none;
   cursor: pointer;
+  margin-left: 10px;
 }
 
-/* Welcome Section Styles */
-.welcome-section {
-  background-color: #fff;
-  padding: 20px;
+.background {
+  background-image: url("background-image.jpg");
+  background-size: cover;
+  height: 500px;
+  position: relative;
 }
 
 .welcome-message {
-  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
 }
 
-.welcome h1 {
-  color: #000;
-}
-
-.welcome p {
-  color: #333;
+.strip h1 {
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-.read-more {
-  color: #333;
-  text-decoration: none;
+.strip h2 {
+  font-size: 24px;
 }
 
-.read-more:hover {
-  text-decoration: underline;
-}
-
-/* Featured Items Styles */
 .featured-items {
-  background-color: #fff;
-  padding: 20px;
-}
-
-.featured-items h2 {
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.carousel {
-  display: flex;
-}
-
-.slide {
-  margin-right: 10px;
-}
-
-.slide img {
-  width: 150px;
-  height: 150px;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #f2f2f2;
-  padding: 20px;
   margin-top: 20px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
+.item {
+  width: 33.33%;
+  float: left;
+  padding: 10px;
+  text-align: center;
 }
 
-.contact-info p {
-  margin-bottom: 10px;
+.item img {
+  width: 100%;
+}
+
+.item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .ubc-logo,
+.footer .canadian-flag {
+  width: 80px;
+}
+
+.footer .writers {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.footer .writers a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    margin-bottom: 10px;
+  }
+
+  .search {
+    margin-top: 10px;
+  }
+
+  .background {
+    height: 300px;
+  }
+
+  .strip h1 {
+    font-size: 24px;
+  }
+
+  .strip h2 {
+    font-size: 18px;
+  }
+
+  .item {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .footer .ubc-logo,
+  .footer .canadian-flag {
+    width: 40px;
+  }
 }
