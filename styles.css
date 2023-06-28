@@ -8,198 +8,172 @@
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+header {
+  background-color: white;
 }
 
-.strip {
+nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px;
-}
-
-.logo-link {
-  text-decoration: none;
-  color: #000;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .logo {
-  width: 80px;
+  order: 1;
+}
+
+.logo img {
+  height: 50px;
 }
 
 .menu {
   display: flex;
-  list-style-type: none;
+  list-style: none;
+  order: 2;
 }
 
 .menu-item {
   position: relative;
+  margin-left: 20px;
 }
 
 .menu-item a {
+  color: black;
   text-decoration: none;
-  color: #000;
   padding: 10px;
 }
 
-.sub-menu {
+.menu-item:hover a {
+  color: #888;
+}
+
+.submenu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
+  background-color: white;
   padding: 10px;
-  z-index: 1;
 }
 
-.menu-item:hover .sub-menu {
+.menu-item:hover .submenu {
   display: block;
 }
 
-.sub-menu li {
+.submenu li {
   margin-bottom: 5px;
 }
 
-.search {
+.search-area {
+  order: 3;
   display: flex;
   align-items: center;
 }
 
-.search input[type="text"] {
+.search-area input[type="text"] {
   padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #888;
 }
 
-.search button {
+.search-area button {
+  margin-left: 5px;
   padding: 5px 10px;
-  background-color: #000;
-  color: #fff;
+  border-radius: 5px;
+  background-color: #888;
+  color: white;
   border: none;
-  cursor: pointer;
-  margin-left: 10px;
 }
 
-.background {
-  background-image: url("background-image.jpg");
+.hero-section {
+  background-color: #f7f7f7;
+  background-image: url(background-image.jpg);
   background-size: cover;
-  height: 500px;
-  position: relative;
+  background-repeat: no-repeat;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  width: 50%;
+  color: black;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .welcome-message {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-.strip h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.strip h2 {
-  font-size: 24px;
+.read-more {
+  color: #888;
+  text-decoration: none;
 }
 
 .featured-items {
-  margin-top: 20px;
-}
-
-.item {
-  width: 33.33%;
-  float: left;
-  padding: 10px;
-  text-align: center;
-}
-
-.item img {
-  width: 100%;
-}
-
-.item h3 {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-.footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer .ubc-logo,
-.footer .canadian-flag {
-  width: 80px;
-}
-
-.footer .writers {
+  width: 50%;
   display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+  flex-direction: column;
 }
 
-.footer .writers a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 10px;
+.featured-title {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* Media queries */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-  }
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .menu-item {
-    margin-bottom: 10px;
-  }
+.slide {
+  display: none;
+}
 
-  .search {
-    margin-top: 10px;
-  }
+.slide:first-child {
+  display: block;
+}
 
-  .background {
-    height: 300px;
-  }
+.slide img {
+  width: 100%;
+  height: auto;
+}
 
-  .strip h1 {
-    font-size: 24px;
-  }
+.footer-content {
+  background-color: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .strip h2 {
-    font-size: 18px;
-  }
+.footer-links {
+  display: flex;
+  align-items: center;
+}
 
-  .item {
-    width: 100%;
-  }
+.footer-links img {
+  height: 30px;
+  margin-right: 10px;
+}
 
-  .footer {
-    padding: 10px;
-  }
+.ubc-address {
+  margin-bottom: 10px;
+}
 
-  .footer .ubc-logo,
-  .footer .canadian-flag {
-    width: 40px;
-  }
+.writers a {
+  margin-right: 10px;
 }
