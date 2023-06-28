@@ -107,15 +107,14 @@ header {
   color: #fff;
   text-align: left;
   /* Position the Modernas title and subtitle above the welcoming message */
-  top: 20px;
+  top: 0px;
 }
-
 .welcome-message {
   max-width: 600px;
   margin: 40px auto;
   /* Position the welcoming text absolutely within the hero section */
   position: absolute;
-  top: 0;
+  top: 20px;
   bottom: 60px;
   color: #fff;
 }
