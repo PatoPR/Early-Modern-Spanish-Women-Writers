@@ -1,92 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modernas</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
   <header>
-    <nav>
-      <div class="logo">
-        <a href="#"><img src="modernas-logo.png" alt="Modernas Logo"></a>
-      </div>
-      <ul class="menu">
-        <li class="menu-item">
-          <a href="#">Home</a>
-          <ul class="submenu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="#">Catalogue</a>
-        </li>
-        <li class="menu-item">
-          <a href="#">Maps</a>
-        </li>
-      </ul>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="modernas.png" alt="Modernas Logo" class="logo">
+      </a>
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="#" class="menu-link">ABOUT</a>
+            <ul class="submenu">
+              <li><a href="#">About Modernas</a></li>
+              <li><a href="#">Research Presentation</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">CATALOGUE</a>
+            <ul class="submenu">
+              <li><a href="#">María de Zayas y Sotomayor (1637 and 1647)</a></li>
+              <li><a href="#">Leonor de Meneses (1655)</a></li>
+              <li><a href="#">Mariana de Carvajal y Saavedra (1663)</a></li>
+              <li><a href="#">Ana Francisca Abarca de Bolea y Mur (1679)</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">VISUALIZATION TOOLS</a>
+            <ul class="submenu">
+              <li><a href="#">Voyant Tools</a></li>
+              <li><a href="#">Maps</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">RESOURCES</a>
+            <ul class="submenu">
+              <li><a href="#">Bibliography</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
       <div class="search-area">
-        <input type="text" placeholder="Search...">
-        <button>Search</button>
+        <input type="text" placeholder="Search">
+        <button type="submit">Search</button>
       </div>
-    </nav>
+    </div>
   </header>
-
-  <div class="hero-section">
+  
+  <section class="hero-section">
+    <div class="hero-background">
+      <img src="background-image.jpg" alt="Background Image" class="hero-image">
+    </div>
     <div class="hero-content">
-      <h1 class="title">Modernas</h1>
-      <h2 class="subtitle">Spanish Women Writers from Early Modernity</h2>
-      <p class="welcome-message">Welcome to our website dedicated to exploring and celebrating the rich literary heritage of
-        Spanish women writers from early modernity. Our mission is to bring to light the often-overlooked contributions of
-        these remarkable women, including María de Zayas y Sotomayor, María Egual, Leonor de Meneses Noronha, Mariana de
-        Carvajal y Saavedra, and Ana Francisca Abarca de Bolea y Mur. These writers defied the gender roles of their time
-        and broke through the barriers that held them back, leaving behind a legacy of powerful, insightful, and
-        influential literary works that continue to inspire and captivate readers today.</p>
-      <p class="welcome-message">On this website, you’ll find in-depth research, insightful analysis, and fascinating historical context
-        about the lives and works of these trailblazing writers. Our team of dedicated researchers is committed to
-        uncovering the hidden gems of Spanish women’s literature, and we invite you to join us on this journey of
-        discovery.</p>
-      <p class="welcome-message">We hope this website serves as a valuable resource for scholars, students, and enthusiasts alike and
-        sparks a renewed appreciation for the groundbreaking contributions of Spanish women writers throughout history.
-        Thank you for visiting, and we invite you to explore the fascinating world of early modern Spanish women’s
-        literature with us.</p>
-      <a href="#" class="read-more">Read More</a>
+      <h1 class="hero-title">MODERNAS</h1>
+      <h2 class="hero-subtitle">Spanish Women Writers from Early Modernity</h2>
+      <p class="welcome-message">
+        Welcome to our website dedicated to exploring and celebrating the rich literary heritage of Spanish women writers from early modernity. Our mission is to bring to light the often-overlooked contributions of these remarkable women, including María de Zayas y Sotomayor, María Egual, Leonor de Meneses Noronha, Mariana de Carvajal y Saavedra, and Ana Francisca Abarca de Bolea y Mur. These writers defied the gender roles of their time and broke through the barriers that held them back, leaving behind a legacy of powerful, insightful, and influential literary works that continue to inspire and captivate readers today.
+        <a href="#" class="read-more-link">Read more</a>
+      </p>
     </div>
-    <div class="featured-items">
-      <h2 class="featured-title">Featured Items</h2>
-      <div class="carousel">
-        <div class="slide">
-          <a href="#"><img src="catalogue.jpg" alt="Catalogue"></a>
-        </div>
-        <div class="slide">
-          <a href="#"><img src="maps.jpg" alt="Maps"></a>
-        </div>
+  </section>
+  
+  <section class="featured-items-section">
+    <h2 class="featured-items-title">Featured Items</h2>
+    <div class="carousel">
+      <div class="slide">
+        <a href="#">
+          <img src="visualization-tools.png" alt="Visualization Tools" class="featured-item-image">
+        </a>
       </div>
+      <div class="slide">
+        <a href="#">
+          <img src="catalogue.jpg" alt="Catalogue" class="featured-item-image">
+        </a>
+      </div>
+      <div class="slide">
+        <a href="#">
+          <img src="maps.jpg" alt="Maps" class="featured-item-image">
+        </a>
+      </div>
+      <button class="prev-button">Previous</button>
+      <button class="next-button">Next</button>
     </div>
-  </div>
-
+  </section>
+  
   <footer>
-    <div class="footer-content">
-      <div class="footer-logo">
-        <a href="#"><img src="ubc-logo.jpg" alt="UBC Logo"></a>
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="https://www.ubc.ca">
+          <img src="ubc-logo.jpg" alt="UBC Logo" class="ubc-logo">
+        </a>
+        <p class="ubc-address">
+          Vancouver Campus<br>
+          French, Hispanic and Italian Studies Department<br>
+          715 - 1873 East Mall. Buchanan Tower<br>
+          Vancouver, British Columbia Canada V6T 1Z1
+        </p>
       </div>
-      <div class="address">
-        <p>Vancouver Campus</p>
-        <p>French, Hispanic and Italian Studies Department</p>
-        <p>715 – 1873 East Mall. Buchanan Tower</p>
-        <p>Vancouver, British Columbia Canada V6T 1Z1</p>
-      </div>
-      <div class="footer-logo">
-        <a href="#"><img src="canadian-flag.jpg" alt="Canadian Flag"></a>
+      <div class="footer-right">
+        <a href="https://www.sshrc-crsh.gc.ca/">
+          <img src="canadian-flag.jpg" alt="Canadian Flag" class="canadian-flag">
+        </a>
       </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
-
 </html>
+
+   
