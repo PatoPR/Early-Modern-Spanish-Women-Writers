@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .container {
@@ -106,7 +106,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.7;
-  height: 400px; /* Adjust the height as needed */
+  height: 500px; /* Adjust the height as needed */
 }
 
 .hero-title {
@@ -126,17 +126,17 @@ header {
   font-size: 20px; /* Increase the font size */
 }
 
+/* Welcome Section Styles */
 .welcome-section {
-  position: relative;
   background-color: #f2f2f2;
   padding: 40px 0;
-  text-align: center;
 }
 
 .welcome-message {
-  color: black;
+  text-align: center;
   font-size: 24px;
 }
+
 /* Featured Items Section Styles */
 .featured-items-section {
   background-color: white;
@@ -246,3 +246,4 @@ footer {
 .menu {
   text-align: left;
 }
+
