@@ -106,19 +106,20 @@ header {
 .hero-title,
 .hero-subtitle {
   position: absolute;
-  bottom: 20px; /* Adjust the vertical position as needed */
-  left: 50px; /* Adjust the horizontal position as needed */
+  top: 50%; /* Position them vertically in the middle */
+  left: 50px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Center them vertically */
   color: #fff;
 }
 
 .welcome-message {
   position: absolute;
-  bottom: -100px; /* Adjust the vertical position as needed */
-  left: 50px; /* Adjust the horizontal position as needed */
+  top: calc(100% + 20px); /* Position it below the background image */
+  left: 50px; /* Adjust the left position as needed */
   width: 50%; /* Adjust the width as needed */
-  margin-top: 20px; /* Add some margin to separate it from the titles */
   color: #fff;
 }
+
 
 .read-more-link {
   color: blue;
