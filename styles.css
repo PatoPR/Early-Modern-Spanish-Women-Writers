@@ -10,6 +10,14 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+/* Styles specific to the People page */
+.contributors-section {
+  background-color: #f2f2f2;
+  padding: 150px 0;
+  text-align: left;
+}
+
+
 
 /* Header Styles */
 header {
@@ -262,10 +270,28 @@ footer {
 }
 
 #modernas-logo {
-  width: 140px; /* Increase the size of the Modernas logo */
-  margin-right: 10px; /* Position the Modernas logo slightly rightwards */
+  width: 140px; 
+  margin-right: 10px; 
 }
 
 .menu {
   text-align: left;
+}
+.contributors-section {
+  background-color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.our-team {
+  background-color: white;
+  padding: 40px 0;
+  <h2> text-align: justify; </h2>
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.research-assistants {
+  font-size: 0px; 
 }
