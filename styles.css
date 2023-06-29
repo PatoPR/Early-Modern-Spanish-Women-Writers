@@ -119,22 +119,22 @@ header {
 
 .hero-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 90%;
+  left: 10%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: left;
   color: #fff;
   z-index: 1;
   width: 100%; /* Add width to center the content */
 }
 
 .hero-title {
-  font-size: 70px; /* Increase the font size */
+  font-size: 55px; /* Increase the font size */
   margin-bottom: 05px;
 }
 
 .hero-subtitle {
-  font-size: 50px; /* Increase the font size */
+  font-size: 40px; /* Increase the font size */
   margin-bottom: 10px;
 }
 
