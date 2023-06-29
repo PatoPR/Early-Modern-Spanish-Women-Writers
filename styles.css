@@ -120,7 +120,7 @@ header {
 .hero-content {
   position: absolute;
   top: 90%;
-  left: 10%;
+  left: 58%;
   transform: translate(-50%, -50%);
   text-align: left;
   color: #fff;
@@ -129,12 +129,12 @@ header {
 }
 
 .hero-title {
-  font-size: 55px; /* Increase the font size */
+  font-size: 40px; /* Increase the font size */
   margin-bottom: 05px;
 }
 
 .hero-subtitle {
-  font-size: 40px; /* Increase the font size */
+  font-size: 30px; /* Increase the font size */
   margin-bottom: 10px;
 }
 
@@ -142,11 +142,15 @@ header {
 .welcome-section {
   background-color: #f2f2f2;
   padding: 40px 0;
+  top: 80%;
+  left: 20%;
+  text-align: left;
 }
 
+
 .welcome-message {
-  text-align: left;
   font-size: 22px;
+  margin-bottom: 05px;
 }
 
 /* Featured Items Section Styles */
@@ -154,7 +158,8 @@ header {
   background-color: white;
   padding: 40px 0;
   text-align: left; /* Align text to the left */
-  margin-top: 40px; /* Add more margin between the welcome message and the section */
+  margin-top: 10px; /* Add more margin between the welcome message and the section */
+  margin-bottom: 5px;
   display: flex; /* Display items in a flex layout */
   justify-content: flex-start; /* Align items to the left */
   align-items: flex-start; /* Align items to the top */
@@ -162,17 +167,13 @@ header {
 
 .featured-items-title {
   font-size: 28px; /* Increase the font size */
-  margin-bottom: 20px;
+  
 }
 
 .carousel {
   position: relative;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.slide {
-  display: none;
+  top: 90px; left: 15px;
+  max-width: 300px;
 }
 
 .slide img {
@@ -203,11 +204,21 @@ header {
 
 /* Footer Styles */
 footer {
+  position: fixed;
   background-color: #f2f2f2;
-  padding: 20px 0;
-  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center; 
+  display: inline-block;
+  margin-top: 40px;
+#homeboxes:after {
+  clear: both;
+  content: "";
+  display: block;
 }
-
 .footer-container {
   display: flex;
   align-items: center;
@@ -216,13 +227,13 @@ footer {
 }
 
 .ubc-logo {
-  width: 25px;
-  height: 25px;
+  width: 70px;
+  height: 70px;
 }
 
 .canadian-flag {
-  width: 50px;
-  height: 50px;
+  width: 600px;
+  height: 100px;
 }
 
 .footer-left,
