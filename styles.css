@@ -114,11 +114,9 @@ header {
 
 .hero-subtitle {
   position: absolute;
-  top: 50%; /* Position it vertically in the middle */
+  top: calc(50% + 30px); /* Position it below the title */
   left: 50px; /* Adjust the left position as needed */
-  transform: translateY(-50%); /* Center it vertically */
   color: #fff;
-  margin-top: 10px; /* Add margin between the title and subtitle */
 }
 
 .welcome-message {
@@ -133,8 +131,11 @@ header {
 .featured-items-section {
   background-color: white;
   padding: 40px 0;
-  text-align: center;
+  text-align: left; /* Align text to the left */
   margin-top: 20px; /* Add margin between the welcome message and the section */
+  display: flex; /* Display items in a flex layout */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: flex-start; /* Align items to the top */
 }
 
 .featured-items-title {
