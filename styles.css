@@ -114,7 +114,6 @@ header {
   background-image: url('background-image.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   opacity: 0.7;
 }
 
@@ -130,13 +129,13 @@ header {
 }
 
 .hero-title {
-  font-size: 48px; /* Increase the font size */
-  margin-bottom: 10px;
+  font-size: 70px; /* Increase the font size */
+  margin-bottom: 05px;
 }
 
 .hero-subtitle {
-  font-size: 24px; /* Increase the font size */
-  margin-bottom: 20px;
+  font-size: 50px; /* Increase the font size */
+  margin-bottom: 10px;
 }
 
 /* Welcome Section Styles */
@@ -146,8 +145,8 @@ header {
 }
 
 .welcome-message {
-  text-align: center;
-  font-size: 24px;
+  text-align: left;
+  font-size: 22px;
 }
 
 /* Featured Items Section Styles */
