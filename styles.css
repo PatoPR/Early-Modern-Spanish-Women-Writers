@@ -92,6 +92,7 @@ header {
   color: white;
   cursor: pointer;
 }
+
 /* Hero Section Styles */
 .hero-section {
   position: relative;
@@ -103,13 +104,21 @@ header {
   height: 400px; /* Adjust the height as needed */
 }
 
-.hero-title,
+.hero-title {
+  position: absolute;
+  top: 50%; /* Position it vertically in the middle */
+  left: 50px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Center it vertically */
+  color: #fff;
+}
+
 .hero-subtitle {
   position: absolute;
-  top: 50%; /* Position them vertically in the middle */
+  top: 50%; /* Position it vertically in the middle */
   left: 50px; /* Adjust the left position as needed */
-  transform: translateY(-50%); /* Center them vertically */
+  transform: translateY(-50%); /* Center it vertically */
   color: #fff;
+  margin-top: 10px; /* Add margin between the title and subtitle */
 }
 
 .welcome-message {
@@ -117,13 +126,7 @@ header {
   top: calc(100% + 20px); /* Position it below the background image */
   left: 50px; /* Adjust the left position as needed */
   width: 50%; /* Adjust the width as needed */
-  color: #fff;
-}
-
-
-.read-more-link {
-  color: blue;
-  text-decoration: underline;
+  color: black; /* Set the color to black */
 }
 
 /* Featured Items Section Styles */
@@ -131,6 +134,7 @@ header {
   background-color: white;
   padding: 40px 0;
   text-align: center;
+  margin-top: 20px; /* Add margin between the welcome message and the section */
 }
 
 .featured-items-title {
