@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .container {
@@ -102,6 +102,7 @@ header {
 .hero-section {
   position: relative;
   background-image: url('background-image.jpg');
+  background-color: orchid;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,11 +123,11 @@ header {
 }
 
 .hero-subtitle {
-  font-size: 20px; /* Increase the font size */
+  font-size: 25px; /* Increase the font size */
 }
 
 .welcome-message {
-  margin-top: 20px; /* Add margin to separate from the hero section */
+  margin-top: 10px; /* Add margin to separate from the hero section */
   color: black; /* Set the color to black */
 }
 
