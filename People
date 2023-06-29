@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modernas - People</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="modernas.png" alt="Modernas Logo" id="modernas-logo" style="width: 120px; margin-left: 10px;">
+      </a>
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="#" class="menu-link">ABOUT</a>
+            <ul class="submenu">
+              <li><a href="#">About Modernas</a></li>
+              <li><a href="people.html">People</a></li>
+              <li><a href="#">Research Presentation</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">CATALOGUE</a>
+            <ul class="submenu">
+              <li><a href="#">María de Zayas y Sotomayor (1637 and 1647)</a></li>
+              <li><a href="#">Leonor de Meneses (1655)</a></li>
+              <li><a href="#">Mariana de Carvajal y Saavedra (1663)</a></li>
+              <li><a href="#">Ana Francisca Abarca de Bolea y Mur (1679)</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">VISUALIZATION TOOLS</a>
+            <ul class="submenu">
+              <li><a href="#">Voyant Tools</a></li>
+              <li><a href="#">Maps</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">RESOURCES</a>
+            <ul class="submenu">
+              <li><a href="#">Bibliography</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="search-area">
+        <input type="text" placeholder="Search">
+        <button type="submit">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="contributors-section">
+    <div class="container">
+      <div class="contributors-content">
+        <h2 class="contributors-title">Contributors</h2>
+        <p class="contributors-text">Meet our team of dedicated researchers passionate about exploring Spanish women writers' works. Our team includes experts in Spanish literature, gender studies, and cultural history who bring a wealth of knowledge and experience to our research efforts. We are committed to uncovering the unique voices and perspectives of Spanish women writers throughout history and to sharing their important contributions with the world. Get to know our team members below and discover their individual areas of expertise and research interests.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add the rest of your content here -->
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="https://www.ubc.ca">
+          <img src="ubc-logo.jpg" alt="UBC Logo" class="ubc-logo">
+        </a>
+        <p class="ubc-address">
+          Vancouver Campus<br>
+          French, Hispanic and Italian Studies Department<br>
+          715 - 1873 East Mall. Buchanan Tower<br>
+          Vancouver, British Columbia Canada V6T 1Z1
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="https://www.sshrc-crsh.gc.ca/">
+          <img src="canadian-flag.jpg" alt="Canadian Flag" class="canadian-flag">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
