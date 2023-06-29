@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -102,7 +102,6 @@ header {
 .hero-section {
   position: relative;
   background-image: url('background-image.jpg');
-  background-color: orchid;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,25 +109,33 @@ header {
   height: 400px; /* Adjust the height as needed */
 }
 
-.hero-content {
-  position: absolute;
-  bottom: 20px; /* Adjust the distance from the bottom */
-  left: 50px; /* Adjust the left position as needed */
-  color: #fff;
-}
-
 .hero-title {
+  position: absolute;
+  top: calc(50% - 20px); /* Adjust the top position as needed */
+  left: 50px; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Center it vertically */
+  color: #fff;
   font-size: 28px; /* Increase the font size */
-  margin-bottom: 10px; /* Adjust the spacing */
 }
 
 .hero-subtitle {
-  font-size: 25px; /* Increase the font size */
+  position: absolute;
+  top: calc(50% + 20px); /* Adjust the top position as needed */
+  left: 50px; /* Adjust the left position as needed */
+  color: #fff;
+  font-size: 20px; /* Increase the font size */
+}
+
+.welcome-section {
+  position: relative;
+  background-color: #f2f2f2;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .welcome-message {
-  margin-top: 10px; /* Add margin to separate from the hero section */
-  color: black; /* Set the color to black */
+  color: black;
+  font-size: 24px;
 }
 
 /* Featured Items Section Styles */
