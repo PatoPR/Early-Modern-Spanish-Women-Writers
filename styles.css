@@ -115,7 +115,7 @@ header {
 
 .welcome-message {
   position: absolute; /* Add position absolute to the welcome message */
-  top: calc(50% + 50px); /* Adjust the top position as needed */
+  top: calc(100% + 20px); /* Adjust the top position as needed */
   left: 50px; /* Adjust the left position as needed */
   width: 50%; /* Occupy the left half of the hero section */
   transform: translateY(-50%); /* Center it vertically */
