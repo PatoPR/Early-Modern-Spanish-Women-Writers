@@ -1,8 +1,8 @@
-   /* General Styles */
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -106,7 +106,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.7;
-  height: 500px; /* Adjust the height as needed */
+  height: 400px; /* Adjust the height as needed */
 }
 
 .hero-title {
