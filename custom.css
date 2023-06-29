@@ -1,0 +1,61 @@
+/* Custom CSS for Modern Business Template */
+
+/* Navigation */
+.navbar {
+  margin-bottom: 0;
+}
+
+/* Page Heading/Breadcrumbs */
+h1 {
+  margin: 10px 0;
+  font-size: 40px;
+  color: #333;
+}
+
+.breadcrumb {
+  background-color: #f8f9fa;
+  padding: 8px 15px;
+  list-style: none;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.breadcrumb .breadcrumb-item {
+  display: inline-block;
+}
+
+.breadcrumb .breadcrumb-item:not(:first-child)::before {
+  content: "/";
+  margin: 0 5px;
+  color: #6c757d;
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: #495057;
+}
+
+/* Blog Post */
+.card {
+  margin-bottom: 30px;
+}
+
+.card .card-title {
+  margin-top: 0;
+}
+
+.card .card-text {
+  margin-bottom: 20px;
+}
+
+/* Pagination */
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  background-color: #343a40;
+  color: #fff;
+}
