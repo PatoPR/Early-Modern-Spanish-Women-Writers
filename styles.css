@@ -109,30 +109,25 @@ header {
   height: 400px; /* Adjust the height as needed */
 }
 
-.hero-title {
+.hero-content {
   position: absolute;
-  bottom: 50px; /* Position it at the bottom */
+  bottom: 20px; /* Adjust the distance from the bottom */
   left: 50px; /* Adjust the left position as needed */
   color: #fff;
-  font-size: 32px; /* Increase the font size */
+}
+
+.hero-title {
+  font-size: 28px; /* Increase the font size */
+  margin-bottom: 10px; /* Adjust the spacing */
 }
 
 .hero-subtitle {
-  position: absolute;
-  bottom: 20px; /* Position it slightly above the title */
-  left: 50px; /* Adjust the left position as needed */
-  color: #fff;
-  font-size: 24px; /* Increase the font size */
+  font-size: 20px; /* Increase the font size */
 }
 
 .welcome-message {
-  position: absolute;
-  top: calc(100% + 20px);
-  left: 50px; /* Adjust the left position as needed */
-  width: 50%; /* Adjust the width as needed */
+  margin-top: 20px; /* Add margin to separate from the hero section */
   color: black; /* Set the color to black */
-  background-color: rgba(255, 255, 255, 0.7); /* Add a background color with opacity */
-  padding: 20px; /* Add some padding */
 }
 
 /* Featured Items Section Styles */
@@ -140,11 +135,14 @@ header {
   background-color: white;
   padding: 40px 0;
   text-align: left; /* Align text to the left */
-  margin-top: 400px; /* Add more margin between the welcome message and the section */
+  margin-top: 40px; /* Add more margin between the welcome message and the section */
+  display: flex; /* Display items in a flex layout */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: flex-start; /* Align items to the top */
 }
 
 .featured-items-title {
-  font-size: 32px; /* Increase the font size */
+  font-size: 28px; /* Increase the font size */
   margin-bottom: 20px;
 }
 
