@@ -127,7 +127,7 @@ header {
 
 .welcome-message {
   position: absolute;
-  bottom: 0; /* Position it at the bottom */
+  top: calc(100% + 20px);
   left: 50px; /* Adjust the left position as needed */
   width: 50%; /* Adjust the width as needed */
   color: black; /* Set the color to black */
