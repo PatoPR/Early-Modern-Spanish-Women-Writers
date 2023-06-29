@@ -94,31 +94,28 @@ header {
 }
 /* Hero Section Styles */
 .hero-section {
+  position: relative;
   background-image: url('background-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.7;
   height: 400px; /* Adjust the height as needed */
-  position: relative; /* Add position relative to the hero section */
 }
 
 .hero-title,
 .hero-subtitle {
-  position: absolute; /* Change the position to absolute */
-  top: 50%; /* Position them vertically in the middle */
-  left: 50px; /* Adjust the left position as needed */
-  width: 50%; /* Occupy the left half of the hero section */
-  transform: translateY(-50%); /* Center them vertically */
+  position: absolute;
+  bottom: 20px; /* Adjust the vertical position as needed */
+  left: 50px; /* Adjust the horizontal position as needed */
   color: #fff;
 }
 
 .welcome-message {
-  position: absolute; /* Add position absolute to the welcome message */
-  top: calc(100% + 20px); /* Adjust the top position as needed */
-  left: 50px; /* Adjust the left position as needed */
-  width: 50%; /* Occupy the left half of the hero section */
-  transform: translateY(-50%); /* Center it vertically */
+  position: absolute;
+  bottom: 0; /* Position it at the bottom */
+  left: 50px; /* Adjust the horizontal position as needed */
+  margin-top: 20px; /* Add some margin to separate it from the titles */
   color: #fff;
 }
 
