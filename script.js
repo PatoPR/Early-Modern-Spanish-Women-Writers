@@ -40,7 +40,7 @@ nextButton.addEventListener('click', nextSlide);
 // Automatic sliding every 10 seconds
 setInterval(nextSlide, 7000);
 
- function toggleReadMore() {
+function toggleReadMore() {
   const readMore = document.getElementById('read-more');
   const readMoreLink = document.getElementById('read-more-link');
 
@@ -52,4 +52,25 @@ setInterval(nextSlide, 7000);
     readMoreLink.textContent = 'Read More';
   }
 }
- 
+
+document.addEventListener('DOMContentLoaded', function() {
+  var popupLinks = document.querySelectorAll('.popup-link');
+  var popupCloseButtons = document.querySelectorAll('.popup-close');
+
+  popupLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var popupId = this.getAttribute('href');
+      var popup = document.querySelector(popupId);
+
+      popup.style.display = 'block';
+    });
+  });
+
+  popupCloseButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      var popup = this.closest('.popup');
+      popup.style.display = 'none';
+    });
+  });
+});
