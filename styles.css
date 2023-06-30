@@ -212,7 +212,7 @@ header {
 
 /* Footer Styles */
 footer {
-  position: fixed;
+  position: bottom;
   background-color: #f2f2f2;
   left: 0;
   bottom: 0;
@@ -240,7 +240,7 @@ footer {
 }
 
 .canadian-flag {
-  width: 600px;
+  width: 500px;
   height: 100px;
 }
 
